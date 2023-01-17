@@ -1,0 +1,55 @@
+body {
+    background-image: url('https://media.tenor.com/HLJMoPHa24QAAAAC/sailor-moon.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 40px;
+}
+  
+  
+  #popup {
+    display: flex; /* center the title horizontally and vertically */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* text color */
+    font-size: 3em; /* font size */
+    animation: color-change 5s infinite; /* change color every 5 seconds */
+    margin-top: 40;
+  }
+  
+  /* Keyframe animation to change the text color */
+  @keyframes color-change {
+    0% {color: red;}
+    20% {color: orange;}
+    40% {color: yellow;}
+    60% {color: green;}
+    80% {color: blue;}
+    100% {color: purple;}
+  }
+  
+  #popup {
+    animation: shine 1s infinite;
+    margin-top: 500px;
+  }
+  
+  @keyframes shine {
+    0% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
+    }
+    100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;
+    }
+  }
+  
+  /* Default styles */
+#popup {
+  font-size: 3em;
+}
+
+/* Styles for screens smaller than 800px */
+@media only screen and (max-width: 800px) {
+  #popup {
+    font-size: 2em;
+  }
+}
