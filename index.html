@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feiz Cumple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio autoplay>
+  <source src="cumplei\hppb.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+    <h1 id="popup">¡Te amo mamá! <br><br><br> En el nombre de la luna te deseo un feliz cumpleaños! <br> ATTE: Tu hijo Juan </h1>
+</body>
+<script>// Play background music
+    var audio = new Audio('hppb.mp3');
+    audio.play();
+    
+    // Change background color every 5 seconds
+    setInterval(function() {
+      document.body.style.backgroundColor = getRandomColor();
+    }, 400);
+    
+    // Show the popup on load
+    document.getElementById("popup").style.display = "block";
+    
+    // Get a random color
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+    var audio = document.getElementById("audio");
+var playPause = document.getElementById("play-pause");
+
+playPause.addEventListener("click", playPause);
+
+function playPause() {
+  if (audio.paused) {
+    audio.play();
+    playPause.classList.remove("play");
+    playPause.classList.add("pause");
+  } else {
+    audio.pause();
+    playPause.classList.remove("pause");
+    playPause.classList.add("play");
+  }
+}
+    </script>
+</html>
